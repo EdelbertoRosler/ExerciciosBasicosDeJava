@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.matemática;
 
 import java.io.BufferedReader;
 import java.io.IOException;
