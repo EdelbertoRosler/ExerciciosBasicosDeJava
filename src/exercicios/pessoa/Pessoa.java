@@ -1,6 +1,6 @@
 package exercicios.pessoa;
 
-import exemplos.pessoa.enums.Sexo;
+import exercicios.pessoa.enums.Sexo;
 
 public class Pessoa {
     private String nome;

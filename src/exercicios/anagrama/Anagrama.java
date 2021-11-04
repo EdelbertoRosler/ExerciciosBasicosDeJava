@@ -11,20 +11,20 @@ import java.util.List;
 public class Anagrama {
     private static final BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     private static final List<Object> listaDasPalavras = new ArrayList<>();
-    private static int cont = 0;
-    private static int qntAnagrama = 0;
+    private static int contAnagramas = 0;
 
     public static void main(String[] args) throws IOException {
         prencherLista(lerTexto("Diga: "));
-        System.out.println(listaDasPalavras.get(0));
-        System.out.println(listaDasPalavras.get(1));
-        System.out.println(comparaString(listaDasPalavras.get(0),listaDasPalavras.get(1)));
 
-
-
+        System.out.println(listaDasPalavras);
+        System.out.println(qntAnagramas());
 
     }
 
+
+    /**
+     * Metodo para lêr uma String
+     */
     public static String lerTexto(String txt) throws IOException {
         System.out.print(txt);
         return bf.readLine();
@@ -32,7 +32,7 @@ public class Anagrama {
 
 
 /**
- * Este metodo recebe um texto, separa as palavras e adiciona cada palavra numa lista
+ * Este metodo recebe um texto, separa as palavras dos espaços em branco e adiciona cada palavra numa lista
  */
     public static void prencherLista(String texto) {
         String[] arrayPalavras = texto.split(" ");
@@ -41,26 +41,40 @@ public class Anagrama {
 
 
 /**
- * Este metodo recebe 2 objetos, transforma em string, coloca eles em ordem
- * e verifica se são iguais
+ * Este metodo recebe 2 objetos(duas palavras), transforma em string, coloca eles em ordem alfabética
+ * e verifica se são iguais caracter por caracter
  */
     public static boolean comparaString(Object a, Object b){
-        char aa [] = a.toString().toCharArray();
+        char aa [] = a.toString().toCharArray();//Coloca o objeto em uma array de caracteres
         Arrays.sort(aa);//ordena a array
         char bb [] = b.toString().toCharArray();
         Arrays.sort(bb);
+        int contChar = 0;// variável para somar a quantidade de caracteres iguais
 
-        if (aa.length == bb.length){
+        if (aa.length == bb.length){ //compara as 2 arrays
             for (int i = 0; i < aa.length; i ++){
-                for (int j = 0; j < bb.length; j ++){
+                for (int j = 0; j < aa.length; j ++){
                     if ( aa[i] == bb[j] ){
-                        cont += 1;
+                        contChar += 1;
                         break;
                     }
                 }
             }
         }
-        return cont == aa.length;
+        return contChar == aa.length;
+    }
+
+    /**
+     * Este metodo recebe 2 objetos(duas palavras), transforma em string, coloca eles em ordem alfabética
+     * e verifica se são iguais
+     */
+    public static String qntAnagramas(){
+        for (int i = 0; i < listaDasPalavras.size() - 1; i ++ ){
+            if (comparaString(listaDasPalavras.get(i), listaDasPalavras.get(i+1))){
+                contAnagramas += 1;
+            }
+        }
+        return "Quantidade de anagramas: " + contAnagramas;
     }
 
 

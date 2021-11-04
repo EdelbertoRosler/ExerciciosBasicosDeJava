@@ -1,7 +1,7 @@
 package exercicios.biblioteca;
 
-import exemplos.biblioteca.enums.Language;
-import exemplos.biblioteca.enums.TipoObra;
+import exercicios.biblioteca.enums.Language;
+import exercicios.biblioteca.enums.TipoObra;
 
 import java.util.Objects;
 

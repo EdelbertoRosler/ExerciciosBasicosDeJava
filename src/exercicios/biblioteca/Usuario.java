@@ -1,5 +1,5 @@
 package exercicios.biblioteca;
-import exemplos.biblioteca.enums.TipoUsuario;
+import exercicios.biblioteca.enums.TipoUsuario;
 
 import java.util.Objects;
 

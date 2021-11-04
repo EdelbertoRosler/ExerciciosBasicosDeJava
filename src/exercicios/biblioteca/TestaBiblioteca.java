@@ -1,8 +1,8 @@
 package exercicios.biblioteca;
 
-import exemplos.biblioteca.enums.Language;
-import exemplos.biblioteca.enums.TipoObra;
-import exemplos.biblioteca.enums.TipoUsuario;
+import exercicios.biblioteca.enums.Language;
+import exercicios.biblioteca.enums.TipoObra;
+import exercicios.biblioteca.enums.TipoUsuario;
 
 public class TestaBiblioteca {
     public static void main(String[] args) {

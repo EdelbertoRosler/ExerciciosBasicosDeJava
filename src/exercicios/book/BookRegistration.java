@@ -1,6 +1,6 @@
 package exercicios.book;
 
-import exemplos.book.enums.Language;
+import exercicios.book.enums.Language;
 
 import java.util.HashMap;
 import java.util.Map;
