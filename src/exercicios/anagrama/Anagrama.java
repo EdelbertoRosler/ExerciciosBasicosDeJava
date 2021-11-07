@@ -45,16 +45,16 @@ public class Anagrama {
  * e verifica se são iguais caracter por caracter
  */
     public static boolean comparaString(Object a, Object b){
-        char aa [] = a.toString().toCharArray();//Coloca o objeto em uma array de caracteres
+        char[] aa = a.toString().toCharArray();//Coloca o objeto em uma array de caracteres
         Arrays.sort(aa);//ordena a array
-        char bb [] = b.toString().toCharArray();
+        char[] bb = b.toString().toCharArray();
         Arrays.sort(bb);
         int contChar = 0;// variável para somar a quantidade de caracteres iguais
 
         if (aa.length == bb.length){ //compara as 2 arrays
-            for (int i = 0; i < aa.length; i ++){
-                for (int j = 0; j < aa.length; j ++){
-                    if ( aa[i] == bb[j] ){
+            for (char c : aa) {
+                for (int j = 0; j < aa.length; j++) {
+                    if (c == bb[j]) {
                         contChar += 1;
                         break;
                     }
@@ -65,8 +65,8 @@ public class Anagrama {
     }
 
     /**
-     * Este metodo recebe 2 objetos(duas palavras), transforma em string, coloca eles em ordem alfabética
-     * e verifica se são iguais
+     * Este metodo compara as palavras da arrayList utilizando o método comparaString e soma a quantidade
+     * de anagramas presentes na List
      */
     public static String qntAnagramas(){
         for (int i = 0; i < listaDasPalavras.size() - 1; i ++ ){
@@ -76,6 +76,5 @@ public class Anagrama {
         }
         return "Quantidade de anagramas: " + contAnagramas;
     }
-
 
 }
