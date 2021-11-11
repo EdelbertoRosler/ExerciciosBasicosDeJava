@@ -34,9 +34,7 @@ public class frequrnciaCaracteres {
     }//Coloca cada palavra de um texto em um Array
 
     public static void stringConcatenation(){
-        for (String s : textList) {
-            newText += s;
-        }
+        for (String s : textList) newText += s;
     }//concatena uma array de string em uma string única
 
     public static void newCharList (String text){

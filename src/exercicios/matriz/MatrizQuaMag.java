@@ -26,6 +26,11 @@ public class MatrizQuaMag {
 
     }
 
+    public static int lerInt(String txt) throws IOException {
+        System.out.print(txt);
+        return Integer.parseInt(bf.readLine());
+    }
+
     public static void prencherMatriz() throws IOException {
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
@@ -34,10 +39,6 @@ public class MatrizQuaMag {
         }
     }
 
-    public static int lerInt(String txt) throws IOException {
-        System.out.print(txt);
-        return Integer.parseInt(bf.readLine());
-    }
 
     public static ArrayList somaLinha(){
         for(int i = 0; i < size; i++) {

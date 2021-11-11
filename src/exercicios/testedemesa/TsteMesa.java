@@ -1,4 +1,4 @@
-package exercicios.teste_de_mesa;
+package exercicios.testedemesa;
 
 public class TsteMesa {
     public static void main(String[] args) {
